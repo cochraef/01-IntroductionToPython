@@ -48,7 +48,7 @@ import rosegraphics as rg
 
 ###############################################################################
 #
-# TODO: 3.
+# 3. DONE
 #   Run this module.  A window will pop up and Turtles will move around.
 #   After the Turtles stop moving, *click anywhere in the window to close it*.
 #
@@ -122,6 +122,11 @@ natasha.go_to(rg.Point(-100, 200))
 #   As always, test by running the module.
 #
 ###############################################################################
+
+natasha.speed = 5
+natasha.pen = rg.Pen('blue', 20)
+natasha.left(45)
+natasha.forward(250)
 
 ###############################################################################
 #
