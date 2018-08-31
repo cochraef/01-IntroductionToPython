@@ -130,7 +130,7 @@ natasha.forward(250)
 
 ###############################################################################
 #
-# TODO: 5.
+# 5. DONE
 #   The above code  CONSTRUCTS  two SimpleTurtle objects
 #   and gives those objects NAMES:
 #       boris    natasha
@@ -155,9 +155,17 @@ natasha.forward(250)
 #
 ###############################################################################
 
+squirtle = rg.SimpleTurtle('turtle')
+squirtle.pen = rg.Pen('green', 50)
+squirtle.speed = 1
+squirtle.forward(200)
+squirtle.left(90)
+squirtle.speed = 10  # Hyper speed!
+squirtle.forward(2000)
+
 ###############################################################################
 #
-# TODO: 6.
+# 6. DONE
 #   Run one more time to be sure that all is still OK.
 #   Ensure that no blue bars on the scrollbar-thing to the right remain.
 #
