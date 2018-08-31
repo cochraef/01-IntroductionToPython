@@ -10,7 +10,7 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
 ###############################################################################
 
 ###############################################################################
-# TODO: 2.
+# 2. DONE
 #   You should have RUN the  m5e_loopy_turtles  module and READ its code.
 #   (Do so now if you have not already done so.)
 #
@@ -44,7 +44,7 @@ black_turtle.pen_down()
 number_of_sides = 4
 rotation = 5
 size = 250
-osize = 250
+osize = size
 
 for k in range(15):
     black_turtle.draw_regular_polygon(number_of_sides, size)
@@ -55,9 +55,38 @@ for k in range(15):
     black_turtle.right(45)
 
     black_turtle.right(rotation)
-    black_turtle.forward(1000*rotation/size)
+    black_turtle.forward(500*rotation/size)
     black_turtle.pen_down()
 
     size = size - osize/15
 
+red_turtle = rg.SimpleTurtle()
+red_turtle.pen = rg.Pen('red', 3)
+red_turtle.speed = 10
+
+red_turtle.pen_up()
+red_turtle.go_to(rg.Point(-250, -300))
+red_turtle.pen_down()
+
+# Starting Variables
+number_of_sides = 6
+rotation = 4
+size = 150
+osize = size
+
+for k in range(15):
+    red_turtle.draw_regular_polygon(number_of_sides, size)
+
+    red_turtle.pen_up()
+    red_turtle.left(45)
+    red_turtle.forward(osize/20)
+    red_turtle.right(45)
+
+    red_turtle.left(rotation)
+    red_turtle.forward(500*rotation/size)
+    red_turtle.pen_down()
+
+    size = size - osize/15
+
 window.close_on_mouse_click()
+
