@@ -2,10 +2,10 @@
 Your chance to explore Loops and Turtles!
 
 Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Evan Cochrane.
 """
 ###############################################################################
-# TODO: 1.
+# 1. DONE
 #   On Line 5 above, replace  PUT_YOUR_NAME_HERE  with your own name.
 ###############################################################################
 
@@ -27,3 +27,37 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
 #
 #   Don't forget to COMMIT-and-PUSH when you are done with this module.
 ###############################################################################
+
+import rosegraphics as rg
+
+window = rg.TurtleWindow()
+
+black_turtle = rg.SimpleTurtle()
+black_turtle.pen = rg.Pen('black', 3)
+black_turtle.speed = 10
+
+black_turtle.pen_up()
+black_turtle.go_to(rg.Point(-200, -200))
+black_turtle.pen_down()
+
+# Starting Variables
+number_of_sides = 4
+rotation = 5
+size = 300
+osize = 300
+
+for k in range(15):
+    black_turtle.draw_regular_polygon(number_of_sides, size)
+
+    black_turtle.pen_up()
+    black_turtle.left(45)
+    black_turtle.forward(osize/20)
+    black_turtle.right(45)
+    black_turtle.pen_down()
+
+    black_turtle.right(rotation)
+    black_turtle.forward(5*rotation)
+
+    size = size - osize/15
+
+window.close_on_mouse_click()
