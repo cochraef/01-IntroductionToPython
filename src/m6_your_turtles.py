@@ -37,14 +37,14 @@ black_turtle.pen = rg.Pen('black', 3)
 black_turtle.speed = 10
 
 black_turtle.pen_up()
-black_turtle.go_to(rg.Point(-200, -200))
+black_turtle.go_to(rg.Point(-300, 50))
 black_turtle.pen_down()
 
 # Starting Variables
 number_of_sides = 4
 rotation = 5
-size = 300
-osize = 300
+size = 250
+osize = 250
 
 for k in range(15):
     black_turtle.draw_regular_polygon(number_of_sides, size)
@@ -53,10 +53,10 @@ for k in range(15):
     black_turtle.left(45)
     black_turtle.forward(osize/20)
     black_turtle.right(45)
-    black_turtle.pen_down()
 
     black_turtle.right(rotation)
-    black_turtle.forward(5*rotation)
+    black_turtle.forward(1000*rotation/size)
+    black_turtle.pen_down()
 
     size = size - osize/15
 
